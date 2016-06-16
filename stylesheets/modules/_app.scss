@@ -1,0 +1,35 @@
+@media(max-width:767px){
+  header {
+    text-align: center;
+    img {
+      margin:auto;
+    }  
+  }
+}
+@media(min-width:768px){}
+@media(min-width:992px){}
+@media(min-width:1200px){}
+
+
+header {
+  display:flex;
+  flex-flow: row wrap;
+  background-color: indigo;
+  padding:10px;
+  h1 {
+    color:gold;
+  }
+}
+
+footer {
+  background-color: black;
+  text-align: center;
+  color: #777;
+}
+
+@import 'game4';
+@import 'game1';
+@import 'game2';
+@import 'game3';
+
+

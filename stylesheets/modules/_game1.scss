@@ -1,0 +1,126 @@
+//@import "../../lib/lib";
+
+
+//iphone 6 	375 � 667//
+.box{
+  width:375px;
+  height: 50px;
+  background-color: #76EEC6;
+  display:flex;
+  flex-wrap: nowrap;
+  margin-bottom: 0px;
+  font-family:"Comic Sans MS";
+  font-size: 12px;
+  border-radius: 8px;
+
+
+  .nav{
+    display: flex;
+    width:375px;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    flex-direction:row;
+
+
+
+    .lifeSaver{
+      flex-wrap: nowrap;
+      justify-content: flex-end;
+    }
+
+    .navRuler{
+      display: flex;
+      list-style-type: none;
+      justify-content: flex-start;
+
+
+      .navItem{
+        width: 50px;
+        font-size: 20px;
+      }
+    }
+  }
+
+
+}
+
+.game1{
+  display:flex;
+  justify-content: center;
+  width:375px;
+  height: 587px;
+  flex-wrap: wrap;
+  background-color: #E7F3EF;
+  font-family:"Comic Sans MS";
+  font-size: 14px;
+  border-radius: 5px;
+
+
+  .frame{
+    order: 1;
+
+    width: 375px;
+    .display{
+      width: 373px;
+      border: 2px solid #55C3DC;
+      height: 265px;
+    }
+
+  }
+  .questDis{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    width:350px;
+    order:2;
+    border: 2px solid #55C3DC;
+    height: 70px;
+    background-color: darkseagreen;
+    margin:8px;
+
+
+  }
+  .quests{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    order:3;
+    width: 375px;
+    height:300px;
+    padding: 25px;
+
+
+    .quest{
+      border: 2px solid #55C3DC;
+      width: 150px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: darkseagreen;
+    }
+
+  }
+
+}
+
+.foot{
+  display:flex;
+  width: 375px;
+  height:30px;
+  background-color: #76EEC6;
+  border-radius: 8px;
+  justify-content: center;
+
+}
+
+
+@media screen and(max-width: 400px){
+
+}
+
+
+
+

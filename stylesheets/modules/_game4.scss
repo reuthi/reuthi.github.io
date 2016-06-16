@@ -1,0 +1,126 @@
+
+//iphone 6 	375 � 667//
+.game4{
+    background: url("../../img/game4Img/background.jpg");
+    background-repeat: no-repeat;
+
+    width: 375px;
+    //max-width: 375px;
+    height:587px;
+    .objFrame{
+        height: 487px;
+        display:flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        .objectBox {
+            width: 50px;
+            height: 75px;
+        }
+
+        .flower1{
+
+            margin: 140px 30px 0 15px;
+            width: 40px;
+            height: 40px;
+
+        }
+
+        .flower2{
+            margin: 170px 20px 0 0;
+            width: 45px;
+            height: 45px;
+        }
+
+        .flower3{
+            width: 85px;
+            height: 85px;
+            margin: 290px 30px 0 0;
+        }
+
+        .flower4{
+            margin: 180px 30px 0 0;
+            height: 70px;
+            width: 70px;
+        }
+
+        .bird1{
+            position:relative;
+            padding-top: 25px;
+            animation: fly 7s;
+            animation-direction: alternate;
+
+        }
+
+        .bird2{
+            padding-top: 25px;
+            animation: fly 7s;
+            animation-direction: alternate;
+
+        }
+
+        .bird3{
+            padding-top: 25px;
+            animation: fly 7s;
+            animation-direction: alternate;
+
+        }
+
+        .tree1{
+            margin: 30% 0 0 0;
+        }
+
+        .tree2{
+            margin: 60% 0 0 0;
+        }
+
+        .tree3{
+            margin: 30% 0 0 0;
+        }
+
+        .tree4{
+            margin: 45% 0 0 0;
+            width: 20%;
+            height: 30%;
+        }
+
+        .tree5{
+            margin: 70% 0 0 0;
+            width: 80px;
+            height: 120px;
+        }
+    }
+
+    .answers{
+        display:flex;
+        justify-content: space-around;
+        height: 100px;
+        padding: 0px;
+
+
+        .answer{
+            list-style-type: none;
+            padding: 10px;
+            border: 2px solid red;
+            width: 150px;
+
+        }
+    }
+}
+
+
+@keyframes fly {
+    0%   {right: 5px;}
+    25%  {right: 10px;}
+    50%  {right: 25px;}
+    75%  {right: 70px;}
+    100% {right: 150px;}
+}
+
+@keyframes fly {
+    0%   {right: 5px;}
+    25%  {right: 10px;}
+    50%  {right: 25px;}
+    75%  {right: 70px;}
+    100% {right: 150px;}
+}
