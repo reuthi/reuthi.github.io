@@ -6428,9 +6428,6 @@ footer {
   border-radius: 8px;
   justify-content: center; }
 
-.bodyGame2 {
-  background-image: url("../../img/img_game_2/background.png"); }
-
 .drag {
   border: 0.5px solid black;
   background-color: powderblue;
@@ -6477,15 +6474,12 @@ footer {
 
 .gameContainer {
   border: 2px solid black;
-  position: relative;
   z-index: 1; }
 
 .gameContainer jpg {
-  position: absolute;
   z-index: 2; }
 
 .gameContainer .row {
-  position: absolute;
   z-index: 3;
   display: flex;
   justify-content: center;

@@ -21,15 +21,15 @@
 
 .gameContainer {
     border: 2px solid black;
-     position: relative;
+    //  position: relative;
   z-index: 1;
   jpg{
-        position: absolute;
+        // position: absolute;
   z-index: 2;
     //   z-index: 2
   }
    .row { 
-   position: absolute;
+//    position: absolute;
   z-index: 3; 
    display: flex;
      justify-content: center;
