@@ -7,6 +7,7 @@ function init(){
     gChals = getChals();
      
     renderChals(gChals, '.content');
+    progressBar();
 }
 
 
@@ -37,7 +38,8 @@ function getChals() {
             }
         ];
     }    
-    saveToStorage('chals', gChals);    
+    saveToStorage('chals', gChals); 
+    console.table(gChals)   
     return gChals;
 
 }
@@ -51,7 +53,7 @@ function renderChals(chals, selector) {
                         '<a href="game' + (chal.id + 1) + '.html">'
                             +'<img src="'+getImgIsSolved(chals, chal.id) + '" class="lock">' +
                             '<h2>'+ chal.name +'</h2>' + 
-                            '</a>' +
+                        '</a>' +
                         '</div>';
         
         return strHtml;
@@ -63,7 +65,7 @@ function renderChals(chals, selector) {
 
 function getImgIsSolved (chal, chalId) {
     var imgSrc;
-      if (chal[chalId].isSolved === false) imgSrc = "img/img_index/lock.jpg";
+      if (chal[chalId].isSolved === false) imgSrc = "img/img_index/lock.png";
       else imgSrc = "img/img_index/V.png";
       return imgSrc;
   }
@@ -94,6 +96,7 @@ function getChalById(chalId) {
 
 
 function reportSolved(chalId){
+
     gChals = getFromStorage('chals');
     
     gChals[chalId].isSolved = true;
@@ -115,39 +118,15 @@ function getFromStorage(key) {
     return JSON.parse(str);
 }
 
+function progressBar(){
+    var elPorgress = document.querySelector('.progressBar');
+    var progress = 0;
 
-//
-// var ProgressBar = require('progressbar.js');
-// var line = new ProgressBar.Line('#container');
-//
-// var bar = new ProgressBar.Circle(container, {
-//     color: '#aaa',
-//     // This has to be the same size as the maximum width to
-//     // prevent clipping
-//     strokeWidth: 4,
-//     trailWidth: 1,
-//     easing: 'easeInOut',
-//     duration: 1400,
-//     text: {
-//         autoStyleContainer: false
-//     },
-//     from: { color: '#aaa', width: 1 },
-//     to: { color: '#333', width: 4 },
-//     // Set default step function for all animate calls
-//     step: function(state, circle) {
-//         circle.path.setAttribute('stroke', state.color);
-//         circle.path.setAttribute('stroke-width', state.width);
-//
-//         var value = Math.round(circle.value() * 100);
-//         if (value === 0) {
-//             circle.setText('');
-//         } else {
-//             circle.setText(value);
-//         }
-//
-//     }
-// });
-// bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
-// bar.text.style.fontSize = '2rem';
-//
-// bar.animate(1.0);  // Number from 0.0 to 1.0
+    for(var i = 0; i < gChals.length;i++){
+        if(gChals[i].isSolved)
+        progress += (100 / gChals.length);
+        elPorgress.innerHTML = (progress + '%') ;
+        elPorgress.style.width = (progress + '%');
+    }
+}
+
